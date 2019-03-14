@@ -14,3 +14,6 @@ Service.create(name: "Terapia respiratoria", url_image: "", description: "Terapi
 Service.create(name: "Fonoaudiologia y terapia", url_image: "", description: "Fonoaudiologia y terapia Descripción")
 Service.create(name: "Dermatologia", url_image: "", description: "Dermatologia Descripción")
 Service.create(name: "Oftalmologia", url_image: "", description: "Oftalmologia Descripción")
+
+User.create(name:"Julieta",mail:"jeimmykth.@gmail2.com",password:"12455")
+User.create(name:"Danyy",mail:"pillo.@gmail.com",password:"1245fd")
