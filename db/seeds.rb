@@ -15,5 +15,7 @@ Service.create(name: "Fonoaudiologia y terapia", url_image: "", description: "Fo
 Service.create(name: "Dermatologia", url_image: "", description: "Dermatologia Descripción")
 Service.create(name: "Oftalmologia", url_image: "", description: "Oftalmologia Descripción")
 
-User.create(name:"Julieta",mail:"jeimmykth.@gmail2.com",password:"12455")
-User.create(name:"Danyy",mail:"pillo.@gmail.com",password:"1245fd")
+user1 = User.create(name:"Julieta",mail:"jeimmykth.@gmail2.com",password:"12455")
+user2 = User.create(name:"Danyy",mail:"pillo.@gmail.com",password:"1245fd")
+
+Doctor.create(user_id: user1.id,description:"ghhjjhdgh",url_photo:"dhhhjjk")
