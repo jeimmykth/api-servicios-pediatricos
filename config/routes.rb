@@ -3,5 +3,6 @@ Rails.application.routes.draw do
     resources :services, only: [:index]
     resources :users
     resources :doctors
+    resources :appointments
   end
 end
