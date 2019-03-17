@@ -4,5 +4,6 @@ Rails.application.routes.draw do
     resources :users
     resources :doctors
     resources :appointments
+    resources :popularities
   end
 end
