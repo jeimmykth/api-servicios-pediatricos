@@ -10,7 +10,7 @@ Service.create(name: "Nutrición y dietetico", url_image: "", description: "Nutr
 Service.create(name: "Procedimientos menores", url_image: "", description: "Procedimientos menores Descripción")
 Service.create(name: "Transporte asistencial básico", url_image: "", description: "Transporte asistencial básico Descripción")
 Service.create(name: "Fisioterapia", url_image: "", description: "Fisioterapia Descripción")
-Service.create(name: "Terapia respiratoria", url_image: "", description: "Terapia respiratoria Descripción")
+pri=Service.create(name: "Terapia respiratoria", url_image: "", description: "Terapia respiratoria Descripción")
 Service.create(name: "Fonoaudiologia y terapia", url_image: "", description: "Fonoaudiologia y terapia Descripción")
 Service.create(name: "Dermatologia", url_image: "", description: "Dermatologia Descripción")
 Service.create(name: "Oftalmologia", url_image: "", description: "Oftalmologia Descripción")
@@ -18,4 +18,6 @@ Service.create(name: "Oftalmologia", url_image: "", description: "Oftalmologia D
 user1 = User.create(name:"Julieta",mail:"jeimmykth.@gmail2.com",password:"12455")
 user2 = User.create(name:"Danyy",mail:"pillo.@gmail.com",password:"1245fd")
 
-Doctor.create(user_id: user1.id,description:"ghhjjhdgh",url_photo:"dhhhjjk")
+doct=Doctor.create(user_id: user1.id,description:"ghhjjhdgh",url_photo:"dhhhjjk")
+
+Appointment.create(user_id: user2.id,doctor_id: doct.id,service_id: pri.id,date: DateTime.new(2001,2,3,4,30))
