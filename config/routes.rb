@@ -5,5 +5,6 @@ Rails.application.routes.draw do
     resources :doctors
     resources :appointments
     resources :popularities
+    resources :prices
   end
 end

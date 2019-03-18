@@ -23,3 +23,5 @@ doct=Doctor.create(user_id: user1.id,description:"ghhjjhdgh",url_photo:"dhhhjjk"
 Appointment.create(user_id: user2.id,doctor_id: doct.id,service_id: pri.id,date: DateTime.new(2001,2,3,4,30))
 
 Popularity.create(user_id: user1.id, doctor_id: doct.id, stars: 2)
+
+Price.create(doctor: doct, service: pri, amount: 25.000)
