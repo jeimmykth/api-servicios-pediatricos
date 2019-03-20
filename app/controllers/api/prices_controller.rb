@@ -1,6 +1,7 @@
 class Api::PricesController < ApplicationController
   before_action :set_price, only: [:show, :update, :destroy]
-
+  before_action :authorize_request
+  
   # GET /prices
   def index
     @prices = Price.all

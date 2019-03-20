@@ -1,5 +1,6 @@
 class Api::PopularitiesController < ApplicationController
   before_action :set_popularity, only: [:show, :update, :destroy]
+  before_action :authorize_request
 
   # GET /popularities
   def index

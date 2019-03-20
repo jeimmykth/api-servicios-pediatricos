@@ -1,5 +1,6 @@
 class Api::ServicesController < ApplicationController
-
+  before_action :authorize_request
+  
   # GET /services
   def index
     @services = Service.all

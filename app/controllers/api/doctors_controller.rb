@@ -1,5 +1,6 @@
 class Api::DoctorsController < ApplicationController
   before_action :set_doctor, only: [:show, :update, :destroy]
+  before_action :authorize_request
 
   # GET /doctors
   def index
