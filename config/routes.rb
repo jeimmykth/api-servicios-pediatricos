@@ -6,5 +6,6 @@ Rails.application.routes.draw do
     resources :appointments
     resources :popularities
     resources :prices
+    post '/login', to: 'authentication#login'
   end
 end

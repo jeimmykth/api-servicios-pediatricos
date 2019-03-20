@@ -1,5 +1,6 @@
 class Api::AppointmentsController < ApplicationController
   before_action :set_appointment, only: [:show, :update, :destroy]
+  before_action :authorize_request
 
   # GET /appointments
   def index
