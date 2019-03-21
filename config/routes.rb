@@ -1,3 +1,10 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  namespace :api do
+    resources :services, only: [:index]
+    resources :users
+    resources :doctors
+    resources :appointments
+    resources :prices
+    post '/login', to: 'authentication#login'
+  end
 end
