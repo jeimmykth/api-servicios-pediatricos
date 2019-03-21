@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 20190318020852) do
   create_table "prices", force: :cascade do |t|
     t.bigint "doctor_id"
     t.bigint "service_id"
-    t.float "amount"
+    t.integer "amount"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["doctor_id"], name: "index_prices_on_doctor_id"
@@ -56,6 +56,8 @@ ActiveRecord::Schema.define(version: 20190318020852) do
 
   create_table "users", force: :cascade do |t|
     t.string "name"
+    t.string "address"
+    t.string "phone_number"
     t.string "email"
     t.string "password_digest"
     t.datetime "created_at", null: false

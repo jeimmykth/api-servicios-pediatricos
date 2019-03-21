@@ -15,11 +15,11 @@ Service.create(name: "Fonoaudiologia y terapia", url_image: "", description: "Fo
 Service.create(name: "Dermatologia", url_image: "", description: "Dermatologia Descripción")
 Service.create(name: "Oftalmologia", url_image: "", description: "Oftalmologia Descripción")
 
-user1 = User.create(name:"Julieta", email:"jeimmy@gmail.com", password:"124555", password_confirmation:"124555")
-user2 = User.create(name:"Danyy", email:"dany@gmail.com", password:"1245fd", password_confirmation:"1245fd")
+user1 = User.create(name:"Julieta", address: "Dirección1", phone_number: 1234567891, email:"jeimmy@gmail.com", password:"124555", password_confirmation:"124555")
+user2 = User.create(name:"Danyy", address: "Dirección2", phone_number: 1234567892, email:"dany@gmail.com", password:"1245fd", password_confirmation:"1245fd")
 
 doct=Doctor.create(user_id: user1.id,description:"ghhjjhdgh",url_photo:"dhhhjjk")
 
 Appointment.create(user_id: user2.id,doctor_id: doct.id,service_id: pri.id,date: DateTime.new(2001,2,3,4,30))
 
-Price.create(doctor: doct, service: pri, amount: 25.000)
+Price.create(doctor: doct, service: pri, amount: 25000)
