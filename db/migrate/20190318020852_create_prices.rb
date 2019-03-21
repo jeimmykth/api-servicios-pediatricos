@@ -3,7 +3,7 @@ class CreatePrices < ActiveRecord::Migration[5.1]
     create_table :prices do |t|
       t.references :doctor, foreign_key: true
       t.references :service, foreign_key: true
-      t.float :amount
+      t.integer :amount
 
       t.timestamps
     end
