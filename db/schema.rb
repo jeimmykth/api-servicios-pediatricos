@@ -36,16 +36,6 @@ ActiveRecord::Schema.define(version: 20190318020852) do
     t.index ["user_id"], name: "index_doctors_on_user_id"
   end
 
-  create_table "popularities", force: :cascade do |t|
-    t.bigint "doctor_id"
-    t.bigint "user_id"
-    t.integer "stars"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["doctor_id"], name: "index_popularities_on_doctor_id"
-    t.index ["user_id"], name: "index_popularities_on_user_id"
-  end
-
   create_table "prices", force: :cascade do |t|
     t.bigint "doctor_id"
     t.bigint "service_id"
@@ -76,8 +66,6 @@ ActiveRecord::Schema.define(version: 20190318020852) do
   add_foreign_key "appointments", "services"
   add_foreign_key "appointments", "users"
   add_foreign_key "doctors", "users"
-  add_foreign_key "popularities", "doctors"
-  add_foreign_key "popularities", "users"
   add_foreign_key "prices", "doctors"
   add_foreign_key "prices", "services"
 end
